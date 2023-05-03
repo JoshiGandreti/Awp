@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Wrap Text Nodes Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $('p').contents().filter(function() {
+          return this.nodeType === 3; // Filter text nodes only
+        }).wrap('<i></i>'); // Wrap the text nodes with an <i> tag
+      });
+    </script>
+  </head>
+  <body>
+    <p>This is <b>some bold text</b> and some normal text.</p>
+  </body>
+</html>

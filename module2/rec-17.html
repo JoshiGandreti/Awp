@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery Mouse Position Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        $(document).mousemove(function(event) {
+          var x = event.pageX;
+          var y = event.pageY;
+          $('#position').text('Mouse position: ' + x + ', ' + y);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <p id="position"></p>
+  </body>
+</html>

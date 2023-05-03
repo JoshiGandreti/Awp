@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>jQuery Click Time Difference Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      var startTime = 0;
+      $('p').click(function () {
+        if (startTime === 0) {
+          startTime = new Date().getTime();
+        } else {
+          var endTime = new Date().getTime();
+          var timeDiff = endTime - startTime;
+          alert('Time difference: ' + timeDiff + ' milliseconds');
+          startTime = 0;
+        }
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <p>Click me twice!</p>
+</body>
+
+</html>

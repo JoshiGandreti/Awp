@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>jQuery on() Method Example</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function() {
+        // Attach an event handler to all buttons with the "myButton" class
+        $('.myButton').on('click', { foo: 'bar' }, function(event) {
+          // Get the data passed with the on() method for this element
+          var data = event.data;
+          console.log(data);
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <button class="myButton">Button 1</button>
+    <button class="myButton">Button 2</button>
+    <button class="myButton">Button 3</button>
+  </body>
+</html>
